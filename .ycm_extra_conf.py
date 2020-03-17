@@ -14,10 +14,7 @@ flags = [
     '-std=c++14',
     '-stdlib=libstdc++',
     '-x','c++',
-    '-I','.' ,
-    '-I','./src' ,
-    '-I','./src/application' ,
-    '-isystem','./3rd/boost/include/'
+    '-I','.'
 ]
 
 
