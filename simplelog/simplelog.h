@@ -16,7 +16,7 @@ public:
   template
   <
     typename T,
-    typename = typename std::enable_if<std::is_integral<T>::value>::type
+    typename = typename std::enable_if<std::is_integral<T>::value || std::is_floating_point<T>::value>::type
   > 
   SimpleLog& operator<<(T val)
   {
