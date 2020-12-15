@@ -34,7 +34,7 @@ clean:
 strip:
 	$(STRIP) $(BUILD)/*
 
-PROGRAMS: $(BUILD)/SimpleAppTemplate 
+PROGRAMS: $(BUILD)/AppTemplate 
 
 $(BUILD)/%: ./%.cpp
 	@$(CXX) $(CXXFLAGS) -o $@ $^ $(LD_FLAGS) $(LD_LIBS)
