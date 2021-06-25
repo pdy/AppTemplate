@@ -22,19 +22,21 @@ endif
 
 .PHONY: all clean
 
-all: dist PROGRAMS strip
+all: post-build
 debug: all
 
-dist:
-	@mkdir -p $(BUILD) 
+pre-build:
+	@mkdir -p $(BUILD) # prep dist 
+
+post-build: main-build
+	$(STRIP) $(BUILD)/*
+
+main-build: pre-build
+	@$(MAKE) --no-print-directory $(BUILD)/AppTemplate
 	
 clean:
 	@rm -r ./bin
 
-strip:
-	$(STRIP) $(BUILD)/*
-
-PROGRAMS: $(BUILD)/AppTemplate 
 
 $(BUILD)/%: ./%.cpp
 	@$(CXX) $(CXXFLAGS) -o $@ $^ $(LD_FLAGS) $(LD_LIBS)
