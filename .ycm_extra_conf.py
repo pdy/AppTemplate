@@ -15,7 +15,8 @@ flags = [
     '-std=c++17',
     '-stdlib=libstdc++',
     '-x','c++',
-    '-I','.'
+    '-I','.',
+    '-isystem', "cmdline"
 ]
 
 
