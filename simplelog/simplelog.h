@@ -55,6 +55,12 @@ public:
     return *this;
   }
 
+  SimpleLog& operator<<(std::string_view str)
+  {
+    m_ss << str;
+    return *this;
+  }
+
   SimpleLog& operator<<(const std::stringstream &ss)
   {
     m_ss << ss.str();
@@ -76,6 +82,6 @@ private:
   std::stringstream m_ss;
 };
 
-#define log (SimpleLog{})
+#define LOG (SimpleLog{})
 
 #endif

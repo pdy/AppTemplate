@@ -37,23 +37,23 @@ int main(int argc, char *argv[])
   {
     const auto fullErr = arg.error_full();
     if(!fullErr.empty())
-      log << fullErr;
+      LOG << fullErr;
      
-    log << arg.usage();
+    LOG << arg.usage();
     return 0;
   }
   
   if(arg.exist("help"))
   {
-    log << arg.usage();
+    LOG << arg.usage();
     return 0;
   } 
 
   /* Example file arg check and get
   if(!arg.exist("file"))
   {
-    log << "--file or -f argument is mandatory!\n";
-    log << arg.usage();
+    LOG << "--file or -f argument is mandatory!\n";
+    LOG << arg.usage();
     return 0;
   }
   
