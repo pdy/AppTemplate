@@ -2,7 +2,7 @@ print-%  : ; @echo $* = $($*)
 
 CXX := clang++
 
-FLAGS := -std=c++17 -Wno-deprecated-register -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded
+FLAGS := -std=c++20 -Wno-deprecated-register -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded
 
 LD_FLAGS := #-L
 
