@@ -3,7 +3,7 @@ Utility that serves me as starting point whenever I need to write small tool or 
 # Build
 
 Makefiles are linux only. Tools you need:
-* clang++ with c++17 support
+* g++/clang++ with c++20 support
 
 If you'll use my script, app is easy to prepare
 
@@ -13,5 +13,5 @@ $ sh napp.sh StartApp
 $ cd StartApp
 $ make
 ````
-Then enter 'build' directory to access binaries.
+Then enter 'bin' directory to access binaries.
 
