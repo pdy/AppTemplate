@@ -1,7 +1,7 @@
 /*
 *  MIT License
 *  
-*  Copyright (c) 2020 Pawel Drzycimski
+*  Copyright (c) 2025 Pawel Drzycimski
 *  
 *  Permission is hereby granted, free of charge, to any person obtaining a copy
 *  of this software and associated documentation files (the "Software"), to deal
@@ -24,7 +24,7 @@
 */
 
 #include <cmdline.h> 
-#include "simplelog/simplelog.h"
+#include "simplelog/simplelog.hpp"
 
 
 int main(int argc, char *argv[])
