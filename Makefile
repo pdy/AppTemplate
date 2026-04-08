@@ -9,7 +9,7 @@ LD_FLAGS := #-L
 
 LD_LIBS := -pthread
 
-INCLUDES := -isystemcmdline 
+INCLUDES := -isystemcmdline
 
 BUILD = ./bin/release
 CXXFLAGS = $(FLAGS) $(INCLUDES) -O3 -Wall
@@ -27,14 +27,14 @@ debug: all
 release: all
 
 pre-build:
-	@mkdir -p $(BUILD) # prep dist 
+	@mkdir -p $(BUILD) # prep dist
 
 post-build: main-build
 	$(STRIP) $(BUILD)/*
 
 main-build: pre-build
 	@$(MAKE) --no-print-directory $(BUILD)/AppTemplate
-	
+
 clean:
 	@rm -r ./bin
 
